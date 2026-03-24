@@ -152,6 +152,20 @@ reviews:
         - Mermaid-діаграми бажані, але не обов'язкові
         - Українською або англійською
 
+    - path: "docs/product/PRD.md"
+      instructions: |
+        Це домашнє завдання — reverse-engineered PRD для Excalidraw.
+        Перевір наявність секцій:
+        1. Мета продукту (Product Purpose) — чітко, 2-3 речення
+        2. Цільова аудиторія (Target Audience) — хто і навіщо використовує
+        3. Ключові функції (Key Features) — мінімум 5 конкретних фіч
+        4. Технічні обмеження / Non-goals — що продукт НЕ робить
+        5. Факти відповідають реальному Excalidraw (whiteboard, collaborative, open-source)
+        Розмір: 50–300 рядків.
+        Якщо файл < 30 рядків — ⚠️ занадто поверхневий.
+        Якщо містить вигадані фічі (наприклад, "AI drawing") — ❌.
+        Оціни якість: ✅ якісний / ⚠️ потребує доопрацювання / ❌ неприйнятний.
+
     - path: "docs/product/**"
       instructions: |
         Файли Product Docs (Крок 5 воркшопу).
@@ -227,6 +241,17 @@ reviews:
           Each term should have a definition and context.
           PASS if file exists with 5+ well-defined terms.
           FAIL if file is missing or has fewer than 5 terms.
+
+      - mode: "warning"
+        name: "Product PRD"
+        instructions: >
+          Check that the PR includes docs/product/PRD.md —
+          a reverse-engineered Product Requirements Document for Excalidraw.
+          The file should contain at least these sections:
+          Product Purpose, Target Audience, Key Features (5+), Non-goals/Constraints.
+          File should be between 50 and 300 lines.
+          PASS if file exists with 3+ required sections and at least 5 features listed.
+          FAIL if file is missing or has fewer than 3 sections.
 
 chat:
   auto_reply: true
